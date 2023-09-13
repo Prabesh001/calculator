@@ -1,12 +1,17 @@
 const display=document.querySelector('.display')
-
+let result=false
     function displayValue(value){
+      if(result){
+        display.value=''
+        result=false;
+      }
       display.value+=value;
     }
 
     function calculate(){
       try{
         display.value=eval(display.value);
+        result=true
       }
       catch(error){
         display.value=''
@@ -16,6 +21,7 @@ const display=document.querySelector('.display')
     }
     function clr(){
       display.value='';
+      result=false
     }
 
     document.body.addEventListener('keydown',(event)=>{
