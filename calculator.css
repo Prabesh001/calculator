@@ -1,7 +1,8 @@
 body{
   background-color: #000a;
+  height: 630px;
   display: flex;
-  margin-top: 100px;
+  align-items: center;
   justify-content: center;
 }
 .calculator{
@@ -11,18 +12,24 @@ body{
   padding: 25px 10px 10px 10px;
 }
 .display{
+  cursor: grab;
   font-size : 50px ;
-  width: 298px;
+  width: 250px;
   padding: 15px;
   overflow: hidden;
   background-color: white;
+}
+.display:active{
+  cursor: grabbing;
 }
 button{
   margin-top: 10px;
   background: #243756;
   color:#fff;
+  width: 23.9%;
   font-size: 40px;
-  height: 60px;
-  width: 80px;
   padding: 10px;
+}
+.buttonBox{
+  margin-top: 10px;
 }
